@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - PoTaTo's Portfolio</title>
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #8a63d2;
+            --secondary-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --card-bg: rgba(30, 30, 30, 0.7);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: rgba(20, 20, 20, 0.8);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2.9rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="letsgame.html">Game</a>
+    </nav>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Fish-Speech</h3>
+                <p>开源SOTA语音合成项目</p>
+                <a href="https://github.com/fishaudio/fish-speech" target="_blank">GitHub 仓库</a>
+            </div>
+            <div class="project-card">
+                <h3>NoobAI-XL</h3>
+                <p>疑似开源SOTA二次元绘画大模型</p>
+                <a href="https://civitai.com/models/833294/noobai-xl-nai-xl" target="_blank">Civitai 模型页面</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

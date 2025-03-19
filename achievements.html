@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - PoTaTo's Portfolio</title>
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #8a63d2;
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --card-bg: rgba(30, 30, 30, 0.7);
+            --achievement-border: #ffd700;
+            --achievement-glow: rgba(255, 215, 0, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            padding: 0; /* 移除原有的padding */
+            margin: 0;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: rgba(20, 20, 20, 0.9);
+            padding: 1.2rem 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            gap: 0.2rem;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.0rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        #achievements {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        #achievements h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(138, 99, 210, 0.5);
+        }
+
+        .achievement-list {
+            list-style-type: none;
+        }
+
+        .achievement-item {
+            background-color: rgba(40, 40, 40, 0.8);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--achievement-border);
+            box-shadow: 0 0 15px var(--achievement-glow);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--achievement-glow);
+        }
+
+        .achievement-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .achievement-icon i {
+            color: var(--bg-color);
+            font-size: 1.5rem;
+        }
+
+        .achievement-content {
+            flex-grow: 1;
+        }
+
+        .achievement-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--achievement-border);
+        }
+
+        .achievement-description {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+
+        .locked {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            border-color: #555;
+            box-shadow: none;
+        }
+
+        .locked .achievement-title {
+            color: #888;
+        }
+
+        .locked .achievement-icon {
+            background-color: #555;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="letsgame.html">Game</a>
+    </nav>
+
+    <section id="achievements">
+        <h1>成就</h1>
+        
+        <!-- 语音领域成就组 -->
+        <div class="achievement-group">
+            <h2 class="group-title">
+                <i class="group-icon">🎤</i>
+                语音合成
+                <span class="completion-rate">2/3 完成</span>
+            </h2>
+            
+            <ul class="achievement-list">
+                <li class="achievement-item">
+                    <div class="achievement-icon">
+                        <i>🏆</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">疑似是开源低手</div>
+                        <div class="achievement-description">是一个20K+⭐TTS项目的核心维护者</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item">
+                    <div class="achievement-icon">
+                        <i>🤓</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">班味渐浓</div>
+                        <div class="achievement-description">有过 中厂 & 国企 & 外企 & 大厂 的语音岗实习经历</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>🖊</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">不想做学术辣！</div>
+                        <div class="achievement-description">Interspeech & ICASSP & TASLP全收集</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 33%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="achievement-group">
+            <h2 class="group-title">
+                <i class="group-icon">🤖</i>
+                你觉得你是二游高手吗？
+                <span class="completion-rate">1/3 完成</span>
+            </h2>
+            
+            <ul class="achievement-list">
+                <li class="achievement-item">
+                    <div class="achievement-icon">
+                        <i>🏆</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">站上舞台吧！</div>
+                        <div class="achievement-description">二创在游戏新春会上放映 3/1</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>💴</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">我要吃饭！</div>
+                        <div class="achievement-description">通过商单恰饭赚到1000元（暂定？）</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>🔒</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">COSPLAY糕手</div>
+                        <div class="achievement-description">在 CP & 萤火虫 & 音律 & Comiket 出自己喜欢的角色</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="achievement-group">
+            <h2 class="group-title">
+                <i class="group-icon">💻</i>
+                游戏大神！
+                <span class="completion-rate">0/4 完成</span>
+            </h2>
+            
+            <ul class="achievement-list">
+                <li class="achievement-item">
+                    <div class="achievement-icon">
+                        <i>🔫</i>
+                    </div>
+                    <div class="achievement-content locked">
+                        <div class="achievement-title">FPS大神？！</div>
+                        <div class="achievement-description">在任意一个FPS游戏中达到最高段位</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>🌟</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">你会看见的，对吗？</div>
+                        <div class="achievement-description">参加某款游戏的世界级比赛，并且在全世界面前全力以赴。</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>🔒</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">还是编程爱好者</div>
+                        <div class="achievement-description">开发一款销量过万的游戏</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="achievement-item locked">
+                    <div class="achievement-icon">
+                        <i>🔒</i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-title">在最后的夜奔赴终点.</div>
+                        <div class="achievement-description">跨越漫长的黑夜，我们将重逢在永恒的明天。</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

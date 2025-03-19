@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PoTaTo's Portfolio</title>
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #8a63d2;
+            --text-color: #e0e0e0;
+            --bg-color: #121212;
+            --card-bg: rgba(30, 30, 30, 0.7);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            padding: 1.2rem 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .development-notice {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="letsgame.html">Game</a>
+    </nav>
+
+    <div class="content">
+        <div class="development-notice">
+            <h2>Page Under Development</h2>
+            <p>This page is currently being built. Please check back later.</p>
+        </div>
+    </div>
+</body>
+</html>
