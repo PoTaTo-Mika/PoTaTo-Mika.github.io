@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="nav.css">
-    <title>Contact - PoTaTo's Portfolio</title>
+    <title>Music Player - PoTaTo's Portfolio</title>
     <style>
         /* 全局样式 */
         :root {
@@ -41,18 +41,30 @@
             padding: 2rem;
         }
 
-        .development-notice {
+        .music-player {
             padding: 2rem;
             background-color: var(--card-bg);
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
             max-width: 600px;
             text-align: center;
+            width: 100%;
         }
 
         h2 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .track-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #aaa;
         }
     </style>
 </head>
@@ -65,9 +77,15 @@
     </nav>
 
     <div class="content">
-        <div class="development-notice">
-            <h2>Page Under Development</h2>
-            <p>This page is currently being built. Please check back later.</p>
+        <div class="music-player">
+            <h2>Music Player</h2>
+            <p>Enjoy this track:</p>
+            <audio controls>
+                <source src="assets/愿戴荣光坠入天渊.m4a" type="audio/mpeg">
+            </audio>
+            <div class="track-info">
+                <p>原来，你一直与我同在</p>
+            </div>
         </div>
     </div>
 </body>
