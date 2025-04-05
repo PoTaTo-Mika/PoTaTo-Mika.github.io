@@ -35,10 +35,11 @@
         .content {
             flex: 1;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             width: 100%;
             padding: 2rem;
+            gap: 2rem;
         }
 
         .music-player {
@@ -49,6 +50,17 @@
             max-width: 600px;
             text-align: center;
             width: 100%;
+        }
+
+        .game-log {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            max-width: 800px;
+            width: 100%;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         h2 {
@@ -66,6 +78,18 @@
             font-size: 0.9rem;
             color: #aaa;
         }
+
+        .log-entry {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .log-date {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -78,13 +102,21 @@
 
     <div class="content">
         <div class="music-player">
-            <h2>Music Player</h2>
+            <h2>本期首推</h2>
             <p>Enjoy this track:</p>
             <audio controls>
                 <source src="assets/愿戴荣光坠入天渊.m4a" type="audio/mpeg">
             </audio>
             <div class="track-info">
-                <p>原来，你一直与我同在</p>
+                <p>原来，你一直与我同在，我亲爱的冒火环印骑士直剑。</p>
+            </div>
+        </div>
+
+        <div class="game-log">
+            <h2>碎碎念</h2>
+            <div class="log-entry">
+                <div class="log-date">2025-4-5</div>
+                <div class="log-content">今天Interspeech出分了，拿了442，感觉还不错，感谢大佬带我还有Fish Audio团队提供的GPU。</div>
             </div>
         </div>
     </div>
