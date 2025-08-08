@@ -3,94 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PoTaTo 的音乐与碎碎念">
+    <meta name="theme-color" content="#8a63d2">
+    <link rel="icon" href="assets/touxiang.png">
+    <link rel="preload" as="image" href="assets/background.png">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="main.css">
     <title>Music Player - PoTaTo's Portfolio</title>
-    <style>
-        /* 全局样式 */
-        :root {
-            --primary-color: #8a63d2;
-            --text-color: #e0e0e0;
-            --bg-color: #121212;
-            --card-bg: rgba(30, 30, 30, 0.7);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 2rem;
-            gap: 2rem;
-        }
-
-        .music-player {
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            max-width: 600px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .game-log {
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            max-width: 800px;
-            width: 100%;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        audio {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .track-info {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-
-        .log-entry {
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .log-date {
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -105,7 +24,7 @@
             <h2>本期首推</h2>
             <p>Enjoy this track:</p>
             <audio controls>
-                <source src="assets/eclipse.m4a" type="audio/mpeg">
+                <source src="assets/eclipse.m4a" type="audio/mp4">
             </audio>
             <div class="track-info">
                 <p>即使是时间也无法丈量。</p>
@@ -133,6 +52,13 @@
                 <div class="log-date">2025-4-5</div>
                 <div class="log-content">今天Interspeech出分了，拿了442，感觉还不错，感谢大佬带我还有Fish Audio团队提供的GPU。</div>
             </div>
+        </div>
     </div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="muted">© <span id="year"></span> PoTaTo. Built with love.</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

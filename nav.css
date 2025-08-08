@@ -35,6 +35,11 @@ nav a:hover {
     background-color: rgba(138, 99, 210, 0.2);
 }
 
+nav a.active {
+    color: #ffffff;
+    background-color: rgba(138, 99, 210, 0.35);
+}
+
 /* For index.html's special nav container */
 nav .container {
     max-width: 1200px;
