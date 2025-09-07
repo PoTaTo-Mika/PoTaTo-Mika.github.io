@@ -34,7 +34,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('assets/background.png');
+  background-image: url('../background.png');
   background-size: cover;
   background-position: center;
   filter: blur(8px) brightness(0.3);
@@ -234,5 +234,6 @@ footer .footer-inner {
   .tagline span::after { display: none; }
   .profile-image { width: 150px; height: 150px; }
 }
+
 
 
